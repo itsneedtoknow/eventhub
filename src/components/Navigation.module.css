@@ -1,0 +1,41 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.activeNavLink {
+  color: #7b2cbf;
+  font-weight: 600;
+}
+
+.navLink:hover {
+  color: #7b2cbf;
+}
+.favoritesLink {
+  transition:
+    transform 0.2s,
+    color 0.2s;
+}
+
+.favoritesLink:hover {
+  color: #ff4d4f; /* Красный цвет для сердечка при наведении */
+  transform: scale(1.05);
+}
+@media (max-width: 768px) {
+  .navigation {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
