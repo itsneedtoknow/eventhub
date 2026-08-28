@@ -1,0 +1,256 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "Стендап концерт",
+      "description": "Лучшие комики города на большой сцене со своим новым материалом.",
+      "date": "2026-09-15",
+      "price": 1200,
+      "img": "https://unsplash.com",
+      "ageLimit": 18,
+      "duration": "2 часа",
+      "isFav": "false",
+      "place": {
+        "id": "p1",
+        "value": "standup-club",
+        "text": "StandUp Club №1"
+      },
+      "category": {
+        "id": "c1",
+        "value": "humor",
+        "text": "Юмор"
+      }
+    },
+    {
+      "id": "2",
+      "title": "Рок-фестиваль «Наше Лето»",
+      "description": "Живой легендарный звук под открытым небом. Главные рок-группы страны.",
+      "date": "2026-09-20",
+      "price": 2500,
+      "img": "https://unsplash.com",
+      "ageLimit": 16,
+      "duration": "6 часов",
+      "isFav": "false",
+      "place": {
+        "id": "p2",
+        "value": "stadium-open",
+        "text": "Открытый Стадион"
+      },
+      "category": {
+        "id": "c2",
+        "value": "music",
+        "text": "Музыка"
+      }
+    },
+    {
+      "id": "3",
+      "title": "Выставка современного искусства",
+      "description": "Работы молодых концептуальных художников, скульпторов и фотографов.",
+      "date": "2026-09-25",
+      "price": 500,
+      "img": "https://unsplash.com",
+      "ageLimit": 0,
+      "duration": "Весь день",
+      "isFav": "false",
+      "place": {
+        "id": "p3",
+        "value": "art-gallery",
+        "text": "Галерея Прогресс"
+      },
+      "category": {
+        "id": "c3",
+        "value": "art",
+        "text": "Выставки"
+      }
+    },
+    {
+      "id": "4",
+      "title": "Джазовый вечер на крыше",
+      "description": "Романтическая атмосфера, классический джаз и огни ночного города.",
+      "date": "2026-09-30",
+      "price": 1800,
+      "img": "https://unsplash.com",
+      "ageLimit": 12,
+      "duration": "2.5 часа",
+      "isFav": "false",
+      "place": {
+        "id": "p4",
+        "value": "roof-terrace",
+        "text": "Терраса Skyline"
+      },
+      "category": {
+        "id": "c2",
+        "value": "music",
+        "text": "Музыка"
+      }
+    },
+    {
+      "id": "5",
+      "title": "Хакатон для веб-разработчиков",
+      "description": "48 часов непрерывного кодинга, крутые менторы и ценные призы для команд.",
+      "date": "2026-10-02",
+      "price": 0,
+      "img": "https://unsplash.com",
+      "ageLimit": 18,
+      "duration": "2 дня",
+      "isFav": "false",
+      "place": {
+        "id": "p5",
+        "value": "tech-hub",
+        "text": "IT-Коворкинг Сфера"
+      },
+      "category": {
+        "id": "c4",
+        "value": "it",
+        "text": "Образование"
+      }
+    },
+    {
+      "id": "6",
+      "title": "Спектакль «Гамлет. Перезагрузка»",
+      "description": "Современное экспериментальное прочтение классической трагедии Шекспира.",
+      "date": "2026-10-05",
+      "price": 1500,
+      "img": "https://unsplash.com",
+      "ageLimit": 16,
+      "duration": "3 часа",
+      "isFav": "false",
+      "place": {
+        "id": "p6",
+        "value": "drama-theater",
+        "text": "Новый Драматический Театр"
+      },
+      "category": {
+        "id": "c5",
+        "value": "theater",
+        "text": "Театр"
+      }
+    },
+    {
+      "id": "7",
+      "title": "Лекция: Как понимать архитектуру",
+      "description": "Узнаем секреты главных архитектурных стилей от античности до модерна.",
+      "date": "2026-10-10",
+      "price": 600,
+      "img": "https://unsplash.com",
+      "ageLimit": 12,
+      "duration": "1.5 часа",
+      "isFav": "false",
+      "place": {
+        "id": "p7",
+        "value": "lecture-hall",
+        "text": "Лекторий Знание"
+      },
+      "category": {
+        "id": "c4",
+        "value": "it",
+        "text": "Образование"
+      }
+    },
+    {
+      "id": "8",
+      "title": "Фестиваль уличной еды",
+      "description": "Более 50 корнеров с кухнями разных стран мира, мастер-классы и музыка.",
+      "date": "2026-10-12",
+      "price": 300,
+      "img": "https://unsplash.com",
+      "ageLimit": 0,
+      "duration": "12 часов",
+      "isFav": "false",
+      "place": {
+        "id": "p8",
+        "value": "city-park",
+        "text": "Центральный Парк"
+      },
+      "category": {
+        "id": "c6",
+        "value": "food",
+        "text": "Фестивали"
+      }
+    },
+    {
+      "id": "9",
+      "title": "Большой Stand-Up: Открытый микрофон",
+      "description": "Проверка новых шуток от популярных комиков и выступление новичков.",
+      "date": "2026-10-15",
+      "price": 800,
+      "img": "https://unsplash.com",
+      "ageLimit": 18,
+      "duration": "2 часа",
+      "isFav": "false",
+      "place": {
+        "id": "p1",
+        "value": "standup-club",
+        "text": "StandUp Club №1"
+      },
+      "category": {
+        "id": "c1",
+        "value": "humor",
+        "text": "Юмор"
+      }
+    },
+    {
+      "id": "10",
+      "title": "Симфоническое шоу: Саундтреки Голливуда",
+      "description": "Оркестр исполнит эпическую музыку из фильмов Интерстеллар, Гладиатор и Гарри Поттер.",
+      "date": "2026-10-20",
+      "price": 3000,
+      "img": "https://unsplash.com",
+      "ageLimit": 6,
+      "duration": "2 часа",
+      "isFav": "false",
+      "place": {
+        "id": "p9",
+        "value": "concert-hall",
+        "text": "Большой Концертный Зал"
+      },
+      "category": {
+        "id": "c2",
+        "value": "music",
+        "text": "Музыка"
+      }
+    },
+    {
+      "id": "11",
+      "title": "Мастер-класс по живописи маслом",
+      "description": "Нарисуем свой первый профессиональный пейзаж за 3 часа. Материалы включены.",
+      "date": "2026-10-25",
+      "price": 2200,
+      "img": "https://unsplash.com",
+      "ageLimit": 12,
+      "duration": "3 часа",
+      "isFav": "false",
+      "place": {
+        "id": "p10",
+        "value": "art-studio",
+        "text": "Студия Палитра"
+      },
+      "category": {
+        "id": "c3",
+        "value": "art",
+        "text": "Выставки"
+      }
+    },
+    {
+      "id": "12",
+      "title": "Концерт инди-группы «Маяк»",
+      "description": "Презентация нового меланхоличного альбома и любимые старые треки.",
+      "date": "2026-10-28",
+      "price": 1300,
+      "img": "https://unsplash.com",
+      "ageLimit": 16,
+      "duration": "1.5 часа",
+      "isFav": "false",
+      "place": {
+        "id": "p11",
+        "value": "music-bar",
+        "text": "Клуб Атмосфера"
+      },
+      "category": {
+        "id": "c2",
+        "value": "music",
+        "text": "Музыка"
+      }
+    }
+  ]
+}
