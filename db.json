@@ -5,21 +5,25 @@
       "title": "Стендап концерт",
       "description": "Лучшие комики города на большой сцене со своим новым материалом.",
       "date": "2026-09-15",
-      "price": 1200,
-      "img": "https://unsplash.com",
+      "price": {},
+      "img": "https://cdn.culture.ru/images/3aac315d-891b-533e-b360-80aa012e00c8",
       "ageLimit": 18,
       "duration": "2 часа",
-      "isFav": "false",
+      "isFav": true,
       "place": {
         "id": "p1",
         "value": "standup-club",
-        "text": "StandUp Club №1"
+        "text": "StandUp Club №1",
+        "address": "Рождественский бул., 10/7с1, Москва",
+        "coordinates": "55.766288, 37.626213",
+        "mapLink": "https://yandex.by/profile/-/CTXHEYY2"
       },
       "category": {
         "id": "c1",
         "value": "humor",
         "text": "Юмор"
-      }
+      },
+      "true": false
     },
     {
       "id": "2",
@@ -27,14 +31,17 @@
       "description": "Живой легендарный звук под открытым небом. Главные рок-группы страны.",
       "date": "2026-09-20",
       "price": 2500,
-      "img": "https://unsplash.com",
+      "img": "https://ticketscloud.com/s3/production/image/2025-03/67c2a8d6f2e9eb3d6330e921.png",
       "ageLimit": 16,
       "duration": "6 часов",
-      "isFav": "false",
+      "isFav": true,
       "place": {
         "id": "p2",
-        "value": "stadium-open",
-        "text": "Открытый Стадион"
+        "value": "stadium-dinamo",
+        "text": "Стадион Динамо",
+        "address": "Минск, ул. Кирова, 8, корп. 4 этаж 1",
+        "coordinates": "53.896621, 27.559717",
+        "mapLink": "https://yandex.by/profile/-/CTX2n-Ju"
       },
       "category": {
         "id": "c2",
@@ -47,15 +54,22 @@
       "title": "Выставка современного искусства",
       "description": "Работы молодых концептуальных художников, скульпторов и фотографов.",
       "date": "2026-09-25",
-      "price": 500,
-      "img": "https://unsplash.com",
+      "price": {
+        "minPrice": 50,
+        "vipPrice": 500,
+        "standartPrice": 250
+      },
+      "img": "https://ysia.ru/wp-content/uploads/2026/08/1-2.jpg",
       "ageLimit": 0,
       "duration": "Весь день",
-      "isFav": "false",
+      "isFav": true,
       "place": {
         "id": "p3",
         "value": "art-gallery",
-        "text": "Галерея Прогресс"
+        "text": "Национальный художественный музей Республики Беларусь",
+        "address": "Минск, ул. Ленина, 20",
+        "coordinates": "53.898540, 27.560907",
+        "mapLink": "https://yandex.by/profile/-/CTX2r--z"
       },
       "category": {
         "id": "c3",
@@ -68,15 +82,22 @@
       "title": "Джазовый вечер на крыше",
       "description": "Романтическая атмосфера, классический джаз и огни ночного города.",
       "date": "2026-09-30",
-      "price": 1800,
-      "img": "https://unsplash.com",
+      "price": {
+        "minPrice": 50,
+        "vipPrice": 500,
+        "standartPrice": 250
+      },
+      "img": "https://static.tildacdn.com/tild3530-3639-4238-b936-633136383265/DSC_1804.jpg",
       "ageLimit": 12,
       "duration": "2.5 часа",
-      "isFav": "false",
+      "isFav": true,
       "place": {
         "id": "p4",
         "value": "roof-terrace",
-        "text": "Терраса Skyline"
+        "text": "The View",
+        "address": "Минск, Победителей, 7А",
+        "coordinates": "53.907650, 27.549666",
+        "mapLink": "https://yandex.by/profile/-/CTX-AN8I"
       },
       "category": {
         "id": "c2",
@@ -89,15 +110,20 @@
       "title": "Хакатон для веб-разработчиков",
       "description": "48 часов непрерывного кодинга, крутые менторы и ценные призы для команд.",
       "date": "2026-10-02",
-      "price": 0,
-      "img": "https://unsplash.com",
+      "price": {
+        "minPrice": 0
+      },
+      "img": "https://avatars.mds.yandex.net/i?id=3283c3d05872efa5647f639a2a7988f5_l-9848488-images-thumbs&n=13",
       "ageLimit": 18,
       "duration": "2 дня",
-      "isFav": "false",
+      "isFav": false,
       "place": {
         "id": "p5",
         "value": "tech-hub",
-        "text": "IT-Коворкинг Сфера"
+        "text": "Коворкинг Let IT be",
+        "address": "Минск, Октябрьская ул., 23А",
+        "coordinates": "53.890202, 27.575255",
+        "mapLink": "https://yandex.by/maps/-/CTX-ID62"
       },
       "category": {
         "id": "c4",
@@ -110,15 +136,22 @@
       "title": "Спектакль «Гамлет. Перезагрузка»",
       "description": "Современное экспериментальное прочтение классической трагедии Шекспира.",
       "date": "2026-10-05",
-      "price": 1500,
-      "img": "https://unsplash.com",
+      "price": {
+        "minPrice": 150,
+        "vipPrice": 300,
+        "standartPrice": 200
+      },
+      "img": "https://ponominalu.ru/media/i/1338x892/a5-0f-a50f0ebabfc2bc6fa14df5e64e753f3b.jpg",
       "ageLimit": 16,
       "duration": "3 часа",
-      "isFav": "false",
+      "isFav": false,
       "place": {
         "id": "p6",
         "value": "drama-theater",
-        "text": "Новый Драматический Театр"
+        "text": "Государственный академический драматический театр имени Горького",
+        "address": "Минск, ул. Володарского, 5",
+        "coordinates": "53.898371, 27.551023",
+        "mapLink": "https://yandex.by/profile/-/CTX-MXIN"
       },
       "category": {
         "id": "c5",
@@ -131,15 +164,22 @@
       "title": "Лекция: Как понимать архитектуру",
       "description": "Узнаем секреты главных архитектурных стилей от античности до модерна.",
       "date": "2026-10-10",
-      "price": 600,
-      "img": "https://unsplash.com",
+      "price": {
+        "minPrice": 600,
+        "vipPrice": 1200,
+        "standartPrice": 750
+      },
+      "img": "https://avatars.mds.yandex.net/i?id=a31d370083e1577224cba0036eaa6f07_l-4346637-images-thumbs&n=13",
       "ageLimit": 12,
       "duration": "1.5 часа",
-      "isFav": "false",
+      "isFav": true,
       "place": {
         "id": "p7",
         "value": "lecture-hall",
-        "text": "Лекторий Знание"
+        "text": "Laevent",
+        "address": "Минск, просп. Победителей, 115 этаж 3",
+        "coordinates": "53.935326, 27.477120",
+        "mapLink": "https://yandex.by/maps/-/CTX-UJkT"
       },
       "category": {
         "id": "c4",
@@ -152,15 +192,22 @@
       "title": "Фестиваль уличной еды",
       "description": "Более 50 корнеров с кухнями разных стран мира, мастер-классы и музыка.",
       "date": "2026-10-12",
-      "price": 300,
-      "img": "https://unsplash.com",
+      "price": {
+        "minPrice": 50,
+        "vipPrice": 500,
+        "standartPrice": 250
+      },
+      "img": "https://io.sb.by/storage01/iblock/dc6/dc607bbd88d52e99006db5e74fd02c79/6933f56c82505ac3169f8c92f607115d.jpeg",
       "ageLimit": 0,
       "duration": "12 часов",
-      "isFav": "false",
+      "isFav": false,
       "place": {
         "id": "p8",
         "value": "city-park",
-        "text": "Центральный Парк"
+        "text": "Центральный Парк Горького",
+        "address": "Минск, ул. Фрунзе, 2",
+        "coordinates": "53.903135, 27.573289",
+        "mapLink": "https://yandex.by/maps/-/CTX-YUKA"
       },
       "category": {
         "id": "c6",
@@ -173,15 +220,22 @@
       "title": "Большой Stand-Up: Открытый микрофон",
       "description": "Проверка новых шуток от популярных комиков и выступление новичков.",
       "date": "2026-10-15",
-      "price": 800,
+      "price": {
+        "minPrice": 80,
+        "vipPrice": 300,
+        "standartPrice": 250
+      },
       "img": "https://unsplash.com",
       "ageLimit": 18,
       "duration": "2 часа",
-      "isFav": "false",
+      "isFav": true,
       "place": {
         "id": "p1",
         "value": "standup-club",
-        "text": "StandUp Club №1"
+        "text": "StandUp Club №1",
+        "address": "Рождественский бул., 10/7с1, Москва",
+        "coordinates": "55.766288, 37.626213",
+        "mapLink": "https://yandex.by/profile/-/CTXHEYY2"
       },
       "category": {
         "id": "c1",
@@ -194,15 +248,22 @@
       "title": "Симфоническое шоу: Саундтреки Голливуда",
       "description": "Оркестр исполнит эпическую музыку из фильмов Интерстеллар, Гладиатор и Гарри Поттер.",
       "date": "2026-10-20",
-      "price": 3000,
-      "img": "https://unsplash.com",
+      "price": {
+        "minPrice": 100,
+        "vipPrice": 250,
+        "standartPrice": 150
+      },
+      "img": "https://www.freeshows.ru/i/rz/800/img20201106_004_jpg.jpg",
       "ageLimit": 6,
       "duration": "2 часа",
-      "isFav": "false",
+      "isFav": false,
       "place": {
         "id": "p9",
         "value": "concert-hall",
-        "text": "Большой Концертный Зал"
+        "text": "Концертный Зал Минск",
+        "address": "Минск, Октябрьская ул., 5 этаж 4",
+        "coordinates": "53.893651, 27.567187",
+        "mapLink": "https://yandex.by/profile/-/CTX-4W1M"
       },
       "category": {
         "id": "c2",
@@ -215,15 +276,22 @@
       "title": "Мастер-класс по живописи маслом",
       "description": "Нарисуем свой первый профессиональный пейзаж за 3 часа. Материалы включены.",
       "date": "2026-10-25",
-      "price": 2200,
-      "img": "https://unsplash.com",
+      "price": {
+        "minPrice": 50,
+        "vipPrice": 500,
+        "standartPrice": 250
+      },
+      "img": "https://i.ytimg.com/vi/YCk8_taYrKs/maxresdefault.jpg",
       "ageLimit": 12,
       "duration": "3 часа",
-      "isFav": "false",
+      "isFav": false,
       "place": {
         "id": "p10",
         "value": "art-studio",
-        "text": "Студия Палитра"
+        "text": "Студия Палитра",
+        "address": "г.Боровляны ул. 40 лет Победы д.23А",
+        "coordinates": "53.987801, 27.678917",
+        "mapLink": "https://yandex.by/maps/-/CTXD7TiA"
       },
       "category": {
         "id": "c3",
@@ -236,15 +304,22 @@
       "title": "Концерт инди-группы «Маяк»",
       "description": "Презентация нового меланхоличного альбома и любимые старые треки.",
       "date": "2026-10-28",
-      "price": 1300,
-      "img": "https://unsplash.com",
+      "price": {
+        "minPrice": 50,
+        "vipPrice": 500,
+        "standartPrice": 250
+      },
+      "img": "https://avatars.mds.yandex.net/get-afishanew/4487581/b8c78513b8a19989049a77c9ac4a8da8/960x690_noncrop",
       "ageLimit": 16,
       "duration": "1.5 часа",
-      "isFav": "false",
+      "isFav": false,
       "place": {
         "id": "p11",
         "value": "music-bar",
-        "text": "Клуб Атмосфера"
+        "text": "Клуб Реактор",
+        "address": "Минск, ул. Веры Хоружей, 29",
+        "coordinates": "53.922042, 27.561995",
+        "mapLink": "https://yandex.by/profile/-/CTX-a0ib"
       },
       "category": {
         "id": "c2",
@@ -252,5 +327,6 @@
         "text": "Музыка"
       }
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

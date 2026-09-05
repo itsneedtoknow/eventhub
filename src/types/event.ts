@@ -1,5 +1,6 @@
 import type { ICategory } from "./category";
 import type { IPlace } from "./place";
+import type { IPrice } from "./price";
 export interface IEvent {
   img: string;
   date: string;
@@ -9,6 +10,8 @@ export interface IEvent {
   ageLimit: number;
   duration: string;
   id: string;
-  isFav: string;
+  isFav: boolean;
   title: string;
+  price: IPrice;
+  time?: string;
 }
