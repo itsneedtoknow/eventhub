@@ -1,33 +1,18 @@
-import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import { useOutletContext } from "react-router";
-import type { IEvent } from "../types/event";
-import { EventCard } from "../components/EventCard";
-import { UseFavClickHandler } from "../api/events";
-
+import { EventList } from "../components/EventList";
+import { fetchSearchQuery } from "../api/events";
 interface LayoutContextType {
   debouncedSearchQuery: string;
 }
+interface IHomeProps {
+  isOnlyFavorites?: boolean;
+}
 export const BASE_URL = "http://localhost:3000/events";
 
-export function Home() {
+export function Home({ isOnlyFavorites = false }: IHomeProps) {
   const { debouncedSearchQuery } = useOutletContext<LayoutContextType>();
-  const queryClient = useQueryClient();
-
   const limit = 4;
-  async function fetchSearchQuery({ pageParam = 1 }) {
-    const cleanSearch = debouncedSearchQuery ? debouncedSearchQuery.trim() : "";
-    const paginationSetting = `?_page=${pageParam}&_per_page=${limit}`;
-
-    const searchEndPoint = cleanSearch
-      ? `${BASE_URL}${paginationSetting}&title_contains=${debouncedSearchQuery}`
-      : `${BASE_URL}${paginationSetting}`;
-
-    const res = await fetch(searchEndPoint);
-    if (!res.ok) {
-      throw new Error("Ошибка сети");
-    }
-    return await res.json();
-  }
 
   const {
     data,
@@ -38,8 +23,19 @@ export function Home() {
 
     fetchNextPage,
   } = useInfiniteQuery({
-    queryKey: ["events", debouncedSearchQuery],
-    queryFn: fetchSearchQuery,
+    queryKey: [
+      "events",
+      debouncedSearchQuery,
+      isOnlyFavorites ? "favorites" : "all",
+    ],
+    queryFn: ({ pageParam = 1 }) =>
+      fetchSearchQuery(
+        { pageParam },
+        debouncedSearchQuery,
+        BASE_URL,
+        limit,
+        isOnlyFavorites,
+      ),
     initialPageParam: 1,
     getNextPageParam: (lastPage) => {
       return lastPage.next || undefined;
@@ -57,42 +53,15 @@ export function Home() {
 
   return (
     <>
-      <h1>Homepage</h1>
+      <h1>{isOnlyFavorites ? "Избранные мероприятия" : "Все мероприятия"}</h1>
 
-      <div className="events" style={{ marginTop: "20px" }}>
-        <div className="container-wrapper">
-          <div className="events__list">
-            {Array.isArray(allEvents) ? (
-              allEvents.map((item: IEvent) => (
-                <EventCard
-                  key={item.id}
-                  item={item}
-                  onClick={() => UseFavClickHandler(item, queryClient)}
-                />
-              ))
-            ) : (
-              <p>Ожидание данных...</p>
-            )}
-
-            {Array.isArray(allEvents) && allEvents.length === 0 && (
-              <p>Ничего не найдено по запросу «{debouncedSearchQuery}»</p>
-            )}
-          </div>
-          <div style={{ margin: "20px auto", maxWidth: "max-content" }}>
-            {hasNextPage ? (
-              <button
-                onClick={() => fetchNextPage()}
-                disabled={isFetchingNextPage}
-                style={{ padding: "10px 20px", cursor: "pointer" }}
-              >
-                {isFetchingNextPage ? "Загрузка..." : "Показать ещё"}
-              </button>
-            ) : (
-              allEvents.length > 0 && <p>Вы посмотрели все мероприятия</p>
-            )}
-          </div>
-        </div>
-      </div>
+      <EventList
+        events={allEvents}
+        debouncedSearchQuery={debouncedSearchQuery}
+        hasNextPage={hasNextPage}
+        fetchNextPage={fetchNextPage}
+        isFetchingNextPage={isFetchingNextPage}
+      />
     </>
   );
 }

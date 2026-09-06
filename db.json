@@ -62,7 +62,7 @@
       "img": "https://ysia.ru/wp-content/uploads/2026/08/1-2.jpg",
       "ageLimit": 0,
       "duration": "Весь день",
-      "isFav": true,
+      "isFav": false,
       "place": {
         "id": "p3",
         "value": "art-gallery",

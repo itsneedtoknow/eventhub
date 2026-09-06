@@ -7,6 +7,7 @@ interface INavItem {
   value: ReactNode;
   title?: string;
   classNameCustom?: string;
+  id: number;
 }
 interface NavigationProps {
   navItems: INavItem[];
@@ -19,6 +20,7 @@ export function Navigation({ navItems }: NavigationProps) {
           return (
             <NavLink
               to={item.link}
+              key={item.id}
               className={({ isActive }) => {
                 const baseClass = `${styles.navLink} ${isActive ? styles.activeNavLink : ""}`;
                 const customClass = item.classNameCustom

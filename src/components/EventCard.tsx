@@ -17,7 +17,7 @@ export function EventCard({ item, onClick }: IEventProps) {
   }
   return (
     <>
-      <article className={styles.card}>
+      <article className={styles.card} key={item.id}>
         <Link to={`events/${item.id}`} className={styles.imageContainer}>
           {item.img && (
             <img
