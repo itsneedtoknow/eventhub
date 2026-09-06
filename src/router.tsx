@@ -20,6 +20,7 @@ const routes: IRoute[] = [
       { path: "events/:id", element: <Event /> },
       { path: "calendar", element: <Calendar /> },
       { path: "tickets", element: <Tickets /> },
+      { path: "favorites", element: <Home isOnlyFavorites={true} /> },
       { path: "*", element: <NotFound /> },
     ],
   },

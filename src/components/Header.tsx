@@ -21,7 +21,12 @@ export function Header({ onSearchChange, searchQuery }: IHeaderProps) {
           />
           <Navigation
             navItems={[
-              { link: "/tickets", value: "Мои билеты", title: "Мои билеты" },
+              {
+                link: "/tickets",
+                value: "Мои билеты",
+                title: "Мои билеты",
+                id: 1,
+              },
               {
                 link: "/favorites",
                 value: (
@@ -44,6 +49,7 @@ export function Header({ onSearchChange, searchQuery }: IHeaderProps) {
                 ),
                 title: "Избранное",
                 classNameCustom: navStyles.favoritesLink,
+                id: 2,
               },
             ]}
           />
