@@ -1,5 +1,5 @@
 import styles from "./Header.module.css";
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
 import { Navigation } from "./Navigation";
 import navStyles from "./Navigation.module.css";
 import { SearchForm } from "./SearchForm";
@@ -8,6 +8,8 @@ interface IHeaderProps {
   onSearchChange: (value: string) => void;
 }
 export function Header({ onSearchChange, searchQuery }: IHeaderProps) {
+  const page = useLocation();
+
   return (
     <header className={styles.header}>
       <div className="container-wrapper">
@@ -15,10 +17,12 @@ export function Header({ onSearchChange, searchQuery }: IHeaderProps) {
           <NavLink to="/" className={styles.logo}>
             💜 EventHub
           </NavLink>
-          <SearchForm
-            onSearchChange={onSearchChange}
-            searchQuery={searchQuery}
-          />
+          {(page.pathname === "/favorites" || page.pathname === "/") && (
+            <SearchForm
+              onSearchChange={onSearchChange}
+              searchQuery={searchQuery}
+            />
+          )}
           <Navigation
             navItems={[
               {
