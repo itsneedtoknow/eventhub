@@ -8,10 +8,11 @@ export interface IEvent {
   category: ICategory;
   description: string;
   ageLimit: number;
-  duration: string;
+  durationInMinutes: number;
   id: string;
   isFav: boolean;
   title: string;
   price: IPrice;
   time?: string;
+  isPassed: boolean;
 }

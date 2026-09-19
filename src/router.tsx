@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Event } from "./pages/Event";
-import { Layout } from "./components/Layout";
-import { Calendar } from "./pages/Calendar";
-import { Tickets } from "./pages/Tickets";
-import { NotFound } from "./pages/NotFound";
-import { Home } from "./pages/Home";
+import { Event } from "./pages/EventPage/Event.tsx";
+import { Layout } from "./components/Layout.tsx";
+import { Calendar } from "./pages/Calendar.tsx";
+import { Tickets } from "./pages/TicketsPage/Tickets.tsx";
+import { NotFound } from "./pages/NotFound.tsx";
+import { Home } from "./pages/HomePage/Home.tsx";
 
 interface IRoute {
   path: string;

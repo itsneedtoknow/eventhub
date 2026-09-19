@@ -1,0 +1,61 @@
+.ticket,
+.eventDetails {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.eventDetails {
+  min-width: 50%;
+}
+.ticket {
+  background-color: rgb(243, 243, 244);
+  border-radius: 8px;
+  border: 1px solid lightgrey;
+  justify-content: space-between;
+  transition: 0.4s ease;
+}
+.ticket:hover {
+  scale: 1.01;
+  box-shadow: 3px 5px 20px lightgray;
+}
+.ticketImage {
+  max-width: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  a {
+    display: flex;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.actionButtons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 24px;
+}
+.eventLink,
+.cancelButton {
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #cdc0d7;
+  border-radius: 8px;
+  :hover {
+    text-decoration: underline;
+  }
+}
+.cancelButton:hover {
+  cursor: pointer;
+}
+.eventInfo a {
+  text-decoration: none;
+  :hover {
+    text-decoration: underline;
+  }
+}
+.ticketInfo {
+  display: flex;
+  gap: 8px;
+}
