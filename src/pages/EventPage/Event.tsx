@@ -1,15 +1,18 @@
 import { useParams, Link } from "react-router";
-import { BASE_URL } from "./Home";
+import { BASE_URL } from "../HomePage/Home";
 import { useEffect, useState } from "react";
 import styles from "./Event.module.css";
-import { UseFavClickHandler } from "../api/events";
+import { UseFavClickHandler } from "../../api/events";
 import { useQueryClient } from "@tanstack/react-query";
-import type { IEvent } from "../types/event";
+import type { IEvent } from "../../types/event";
+import { formatDate, formatDuration } from "../../utils/dateFormatter";
+import { Tabs } from "../../components/Tabs";
+import type { ITabItem } from "../../types/tab";
 
 export function Event() {
   const { id } = useParams<{ id: string }>();
   const [event, setEvent] = useState<IEvent | null>(null);
-  const [activeTab, setActiveTab] = useState<"about" | "location">("about");
+  //const [activeTab, setActiveTab] = useState<"about" | "location">("about");
   const queryClient = useQueryClient();
 
   async function detailFavClickHandler() {
@@ -44,7 +47,41 @@ export function Event() {
   if (!event) {
     return <div className={styles.loading}>Загрузка мероприятия...</div>;
   }
+  const formattedDate = formatDate(event.date);
+  const formattedDuration = formatDuration(event.durationInMinutes);
 
+  const eventTabs: ITabItem[] = [
+    {
+      tabName: "О мероприятии",
+      tabValue: "about",
+      id: 1,
+      content: (
+        <div className={styles.aboutText}>
+          <p>{event?.description}</p>
+          <div className={styles.metaInfoRow}>
+            {event.ageLimit && <span>👶 Возраст: {event.ageLimit}</span>}
+            {formattedDuration && (
+              <span>⏱ Длительность: {formattedDuration}</span>
+            )}
+          </div>
+        </div>
+      ),
+    },
+
+    {
+      tabName: "Место проведения",
+      tabValue: "place",
+      id: 2,
+      content: (
+        <div className={styles.locationContent}>
+          <p>📍 {event.place.text}</p>
+          <Link to={event.place.mapLink} target="_blank">
+            {event.place.address}
+          </Link>
+        </div>
+      ),
+    },
+  ];
   return (
     <div className={styles.container}>
       <nav className={styles.breadcrumbs}>
@@ -66,49 +103,14 @@ export function Event() {
               className={styles.eventImage}
             />
           </div>
-
-          <div className={styles.tabsHeader}>
-            <button
-              className={`${styles.tabButton} ${activeTab === "about" ? styles.activeTab : ""}`}
-              onClick={() => setActiveTab("about")}
-            >
-              О мероприятии
-            </button>
-            <button
-              className={`${styles.tabButton} ${activeTab === "location" ? styles.activeTab : ""}`}
-              onClick={() => setActiveTab("location")}
-            >
-              Место проведения
-            </button>
-          </div>
-
-          <div className={styles.tabContent}>
-            {activeTab === "about" ? (
-              <div className={styles.aboutText}>
-                <p>{event.description}</p>
-                <div className={styles.metaInfoRow}>
-                  {event.ageLimit && <span>👶 Возраст: {event.ageLimit}</span>}
-                  {event.duration && (
-                    <span>⏱ Длительность: {event.duration}</span>
-                  )}
-                </div>
-              </div>
-            ) : (
-              <div className={styles.locationContent}>
-                <p>📍 {event.place.text}</p>
-                <Link to={event.place.mapLink} target="_blank">
-                  {event.place.address}
-                </Link>
-              </div>
-            )}
-          </div>
+          <Tabs tabs={eventTabs} />
         </div>
         <div className={styles.rightColumn}>
           <div className={styles.ticketCard}>
             <div className={styles.infoGroup}>
               <div className={styles.infoIcon}>📅</div>
               <div>
-                <div className={styles.infoValue}>{event.date}</div>
+                <div className={styles.infoValue}>{`${formattedDate}`}</div>
                 <div className={styles.infoLabel}>{event.time}</div>
               </div>
             </div>

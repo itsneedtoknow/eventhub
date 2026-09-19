@@ -1,0 +1,26 @@
+.modalWindow {
+  border-radius: 16px;
+  position: absolute;
+  max-width: 80%;
+  max-height: 80%;
+  background-color: lightgray;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.modalWrapper {
+  padding: 24px;
+}
+.modalCloseBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.actionButtons {
+  display: flex;
+  gap: 24px;
+  padding: 16px;
+  margin: 0 auto;
+  justify-content: center;
+}

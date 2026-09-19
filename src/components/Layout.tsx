@@ -9,7 +9,9 @@ export function Layout() {
   return (
     <>
       <Header searchQuery={searchQuery} onSearchChange={setSearchQuery} />
-      <Outlet context={{ debouncedSearchQuery }} />
+      <main className="main">
+        <Outlet context={{ debouncedSearchQuery }} />
+      </main>
     </>
   );
 }

@@ -1,13 +1,17 @@
 import { Link } from "react-router";
-import type { IEvent } from "../types/event";
-import { Button } from "./Button";
+import type { IEvent } from "../../types/event";
+import { Button } from "../../components/Button";
 import styles from "./EventCard.module.css";
+import { formatDate, formatDuration } from "../../utils/dateFormatter";
 interface IEventProps {
   item: IEvent;
   onClick: (item: IEvent) => void;
 }
 export function EventCard({ item, onClick }: IEventProps) {
   const isFavorite = item.isFav === true;
+  const formattedDate = formatDate(item.date);
+  const formattedDuration = formatDuration(item.durationInMinutes);
+
   function favClickHandler(e: React.MouseEvent) {
     e.preventDefault();
     onClick(item);
@@ -73,7 +77,8 @@ export function EventCard({ item, onClick }: IEventProps) {
           <div className={styles.footer}>
             <div className={styles.info}>
               <div className={styles.infoItem}>
-                📅 {item.date} ({item.duration})
+                📅 {`${formattedDate}`} (
+                {formattedDuration ? formattedDuration : ""})
               </div>
               <div className={styles.infoItem}>📍 {item.place.text}</div>
             </div>

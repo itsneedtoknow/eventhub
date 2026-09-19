@@ -30,7 +30,6 @@
   gap: 30px;
 }
 
-/* Левая колонка */
 .leftColumn {
   flex: 2;
   display: flex;
@@ -50,50 +49,6 @@
   height: 380px;
   object-fit: cover;
   display: block;
-}
-
-/* Табы */
-.tabsHeader {
-  display: flex;
-  gap: 20px;
-  border-bottom: 2px solid #eaeaea;
-  margin-bottom: 20px;
-}
-
-.tabButton {
-  background: none;
-  border: none;
-  padding: 10px 5px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #888;
-  cursor: pointer;
-  position: relative;
-  transition: color 0.2s;
-}
-
-.tabButton:hover {
-  color: #6366f1;
-}
-
-.activeTab {
-  color: #6366f1;
-}
-
-.activeTab::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #6366f1;
-}
-
-.tabContent {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555;
 }
 
 .metaInfoRow {
@@ -119,7 +74,6 @@
   border: 1px dashed #d1d5db;
 }
 
-/* Правая колонка */
 .rightColumn {
   flex: 1;
   min-width: 320px;
@@ -132,7 +86,7 @@
   padding: 24px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   position: sticky;
-  top: 20px; /* Чтобы карточка залипала при скролле */
+  top: 20px;
 }
 
 .infoGroup {
@@ -185,7 +139,7 @@
 
 .buyButton {
   width: 100%;
-  background-color: #6366f1; /* Фиолетовый оттенок с макета */
+  background-color: #6366f1;
   color: white;
   border: none;
   padding: 14px;

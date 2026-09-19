@@ -1,7 +1,7 @@
 import { EventCard } from "./EventCard";
 import { useQueryClient } from "@tanstack/react-query";
-import type { IEvent } from "../types/event";
-import { UseFavClickHandler } from "../api/events";
+import type { IEvent } from "../../types/event";
+import { UseFavClickHandler } from "../../api/events";
 
 interface IEventListProps {
   events: IEvent[];
@@ -18,19 +18,24 @@ export function EventList({
   fetchNextPage,
 }: IEventListProps) {
   const queryClient = useQueryClient();
+
   return (
     <>
       <div className="events" style={{ marginTop: "20px" }}>
         <div className="container-wrapper">
           <div className="events__list">
             {Array.isArray(events) ? (
-              events.map((item: IEvent) => (
-                <EventCard
-                  key={item.id}
-                  item={item}
-                  onClick={() => UseFavClickHandler(item, queryClient)}
-                />
-              ))
+              events.map(
+                (item: IEvent) => (
+                  // !item.isPassed && (
+                  <EventCard
+                    key={item.id}
+                    item={item}
+                    onClick={() => UseFavClickHandler(item, queryClient)}
+                  />
+                ),
+                // ),
+              )
             ) : (
               <p>Ожидание данных...</p>
             )}

@@ -1,7 +1,7 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useOutletContext } from "react-router";
-import { EventList } from "../components/EventList";
-import { fetchSearchQuery } from "../api/events";
+import { EventList } from ".//EventList";
+import { fetchSearchQuery } from "../../api/events";
 interface LayoutContextType {
   debouncedSearchQuery: string;
 }
@@ -20,7 +20,6 @@ export function Home({ isOnlyFavorites = false }: IHomeProps) {
     isError,
     isFetchingNextPage,
     hasNextPage,
-
     fetchNextPage,
   } = useInfiniteQuery({
     queryKey: [
@@ -45,23 +44,25 @@ export function Home({ isOnlyFavorites = false }: IHomeProps) {
   if (isLoading) {
     return <h2>Загрузка мероприятий...</h2>;
   }
-
   const allEvents = data ? data.pages.flatMap((item) => item.data) : [];
+
   if (isError) {
     return <h2 style={{ color: "red" }}>Ошибка загрузки данных</h2>;
   }
 
   return (
-    <>
-      <h1>{isOnlyFavorites ? "Избранные мероприятия" : "Все мероприятия"}</h1>
+    <div className="events">
+      <div className="container-wrapper">
+        <h1>{isOnlyFavorites ? "Избранные мероприятия" : "Все мероприятия"}</h1>
 
-      <EventList
-        events={allEvents}
-        debouncedSearchQuery={debouncedSearchQuery}
-        hasNextPage={hasNextPage}
-        fetchNextPage={fetchNextPage}
-        isFetchingNextPage={isFetchingNextPage}
-      />
-    </>
+        <EventList
+          events={allEvents}
+          debouncedSearchQuery={debouncedSearchQuery}
+          hasNextPage={hasNextPage}
+          fetchNextPage={fetchNextPage}
+          isFetchingNextPage={isFetchingNextPage}
+        />
+      </div>
+    </div>
   );
 }

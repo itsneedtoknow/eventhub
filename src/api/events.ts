@@ -30,6 +30,9 @@ export async function fetchSearchQuery(
   const params = new URLSearchParams();
   params.append("_page", pageParam.toString());
   params.append("_per_page", limit.toString());
+
+  const now = new Date().toISOString();
+  params.append("date_gte", now);
   if (query && query.trim() !== "") {
     params.append("title_contains", query.trim());
   }
@@ -42,5 +45,9 @@ export async function fetchSearchQuery(
   if (!res.ok) {
     throw new Error("Ошибка сети");
   }
-  return await res.json();
+
+  const events = await res.json();
+
+  //console.log(upcomingEvents, events);
+  return events;
 }
